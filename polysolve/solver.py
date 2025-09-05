@@ -3,9 +3,9 @@ import math
 
 from cowsay import cow
 
-CBRT_UNITY_IM = sqrt(3)/2 * 1j
+#CBRT_UNITY_IM = sqrt(3)/2 * 1j
 
-def quadratic(a: float, b: float, c: float) -> tuple[float, float]:
+def quadratic(a: float, b: float, c: float) -> tuple[complex, complex]:
     """
     Solves the roots of a quadratic equation.
 
@@ -41,9 +41,9 @@ def quadratic(a: float, b: float, c: float) -> tuple[float, float]:
     Examples
     --------
     >>> quadratic(1, 2, 0)
-    (0.0, -2.0)
+    (0j, (-2+0j))
     >>> quadratic(3., 0., -1.)
-    (0.5773502691896257, -0.5773502691896257)
+    ((0.5773502691896257+0j), (-0.5773502691896257+0j))
 
     See Also
     --------
@@ -103,13 +103,7 @@ def cubic(a: float, b: float, c: float, d: float) -> tuple[float, float, float]:
     .. math::
 
         ax^{3} + bx^{2} + cx+d
-
-    Examples
-    --------
-    >>> quadratic(1, 2, 0)
-    (0.0, -2.0)
-    >>> quadratic(3., 0., -1.)
-    (0.5773502691896257, -0.5773502691896257)
+ 
 
     See Also
     --------
